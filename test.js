@@ -4,15 +4,15 @@ import http from "k6/http";
 
 export const options = {
   scenarios: {
-    ui: {
-      executor: "shared-iterations",
-      exec: "browserFunction",
-      options: {
-        browser: {
-          type: "chromium",
-        },
-      },
-    },
+    // ui: {
+    //   executor: "shared-iterations",
+    //   exec: "browserFunction",
+    //   options: {
+    //     browser: {
+    //       type: "chromium",
+    //     },
+    //   },
+    // },
     http: {
       executor: "constant-vus",
       exec: "httpFunction",

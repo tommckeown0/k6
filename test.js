@@ -4,21 +4,21 @@ import http from "k6/http";
 
 export const options = {
   scenarios: {
-    // ui: {
-    //   executor: "shared-iterations",
-    //   exec: "browserFunction",
-    //   options: {
-    //     browser: {
-    //       type: "chromium",
-    //     },
-    //   },
-    // },
-    http: {
-      executor: "constant-vus",
-      exec: "httpFunction",
-      vus: 10,
-      duration: "5s",
+    ui: {
+      executor: "shared-iterations",
+      exec: "browserFunction",
+      options: {
+        browser: {
+          type: "chromium",
+        },
+      },
     },
+    // http: {
+    //   executor: "constant-vus",
+    //   exec: "httpFunction",
+    //   vus: 10,
+    //   duration: "5s",
+    // },
   },
   thresholds: {
     checks: ["rate==1.0"],

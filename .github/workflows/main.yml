@@ -7,6 +7,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Which chromium
+        shell: bash
+        run: which chromium
+      - name: Install Chromium
+        shell: bash
+        run: snap install chromium
       - name: Run k6 local test
         uses: grafana/k6-action@v0.3.1
         with:

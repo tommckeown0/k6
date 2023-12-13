@@ -12,7 +12,7 @@ jobs:
         run: which chromium
       - name: Install Chromium
         shell: bash
-        run: snap install chromium
+        run: sudo snap install chromium
       - name: Run k6 local test
         uses: grafana/k6-action@v0.3.1
         with:

@@ -19,6 +19,9 @@ jobs:
       - name: Which chromium
         shell: bash
         run: which chromium
+      - name: view usr bin
+        shell: bash
+        run: ls -la /usr/bin
       - name: Run k6 local test
         uses: grafana/k6-action@v0.3.1
         with:
